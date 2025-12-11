@@ -16,7 +16,7 @@
 
 ### Usage
 
-Once you've installed the extension, just open a past quiz and you'll the previous answers hidden. 
+Once you've installed the extension, just open a past quiz and you'll have the previous answers hidden by default. 
 In the question title box, you will find a new button that you can use to toggle the answers back on and off.
 
 ![Usage Screenshot](./media/usage.png)
