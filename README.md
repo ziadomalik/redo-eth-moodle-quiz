@@ -1,0 +1,1 @@
+![Funny Meme, Art by @fallenchungus](./media/problem-description.png)
