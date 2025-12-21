@@ -46,6 +46,8 @@ function injectRevealButton(questionElement, originalData) {
       originalData.inputs.forEach(data => {
         if (data.type === 'checked') {
           data.element.checked = data.value;
+        } else if (data.type === 'select') {
+          data.element.value = data.value;
         } else {
           data.element.value = data.value;
         }
@@ -61,6 +63,8 @@ function injectRevealButton(questionElement, originalData) {
         originalData.inputs.forEach(data => {
           if (data.type === 'checked') {
             data.element.checked = false;
+          } else if (data.type === 'select') {
+            data.element.value = "";
           } else {
             data.element.value = "";
           }
@@ -114,6 +118,14 @@ function hideAnswers() {
         originalData.inputs.push({ element: input, type: "value", value: input.value });
         input.value = "";
       }
+    });
+
+    // (3b) Clear all the select elements:
+    const selects = question.querySelectorAll('select');
+
+    selects.forEach(select => {
+      originalData.inputs.push({ element: select, type: "select", value: select.value });
+      select.value = "";
     });
 
     // (4) Clear the specific feedback inside tables and stuff:
