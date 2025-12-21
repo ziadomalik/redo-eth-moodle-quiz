@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Redo ETH Moodle Quizzes!",
+  "version": "1.0",
+  "description": "A chrome extension to hide answers of already submitted moodle quizzes so you can redo them!",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://moodle-app2.let.ethz.ch/mod/quiz/review.php*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
